@@ -26,22 +26,21 @@ const errorHandler = require("./middlewares/errorHandler");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "https://clothify-by-sohaib.vercel.app",
-    credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
-
 // app.use(
 //   cors({
-//     origin: (origin, callback) => {
-//       callback(null, origin || "*"); // Allow requests from all origins
-//     },
-//     credentials: true, // Allow credentials (cookies, etc.)
+//     origin: process.env.FRONTEND_URL || "http://localhost:5173",
+//     credentials: true,
 //   })
 // );
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      callback(null, origin || "*"); // Allow requests from all origins
+    },
+    credentials: true, // Allow credentials (cookies, etc.)
+  })
+);
 
 if (process.env.NODE_ENV !== "production") {
   console.info(`Node Env: ${process.env.NODE_ENV}`);
