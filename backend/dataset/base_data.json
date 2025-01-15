@@ -1,0 +1,658 @@
+{
+  "categories": [
+    {
+      "_id": "67730187d165b384de15cc67",
+      "name": "home"
+    },
+    {
+      "_id": "67730187d165b384de15cc68",
+      "name": "shoes"
+    },
+    {
+      "_id": "67730187d165b384de15cc69",
+      "name": "toys"
+    },
+    {
+      "_id": "67730187d165b384de15cc6a",
+      "name": "jewelry"
+    },
+    {
+      "_id": "67730187d165b384de15cc6b",
+      "name": "kids"
+    },
+    {
+      "_id": "67730187d165b384de15cc6c",
+      "name": "games"
+    },
+    {
+      "_id": "67730187d165b384de15cc6d",
+      "name": "movies"
+    },
+    {
+      "_id": "67730187d165b384de15cc6e",
+      "name": "sports"
+    },
+    {
+      "_id": "67730187d165b384de15cc6f",
+      "name": "garden"
+    },
+    {
+      "_id": "67730187d165b384de15cc70",
+      "name": "computers"
+    }
+  ],
+  "subCategories": [
+    {
+      "_id": "67730187d165b384de15cc71",
+      "name": "bike",
+      "category": "67730187d165b384de15cc67"
+    },
+    {
+      "_id": "67730187d165b384de15cc72",
+      "name": "car",
+      "category": "67730187d165b384de15cc67"
+    },
+    {
+      "_id": "67730187d165b384de15cc73",
+      "name": "chair",
+      "category": "67730187d165b384de15cc67"
+    },
+    {
+      "_id": "67730187d165b384de15cc74",
+      "name": "computer",
+      "category": "67730187d165b384de15cc67"
+    },
+    {
+      "_id": "67730187d165b384de15cc75",
+      "name": "tuna",
+      "category": "67730187d165b384de15cc67"
+    },
+    {
+      "_id": "67730187d165b384de15cc76",
+      "name": "bacon",
+      "category": "67730187d165b384de15cc68"
+    },
+    {
+      "_id": "67730187d165b384de15cc77",
+      "name": "tuna",
+      "category": "67730187d165b384de15cc68"
+    },
+    {
+      "_id": "67730187d165b384de15cc78",
+      "name": "pizza",
+      "category": "67730187d165b384de15cc68"
+    },
+    {
+      "_id": "67730187d165b384de15cc79",
+      "name": "pants",
+      "category": "67730187d165b384de15cc68"
+    },
+    {
+      "_id": "67730187d165b384de15cc7a",
+      "name": "computer",
+      "category": "67730187d165b384de15cc68"
+    },
+    {
+      "_id": "67730187d165b384de15cc7b",
+      "name": "chair",
+      "category": "67730187d165b384de15cc69"
+    },
+    {
+      "_id": "67730187d165b384de15cc7c",
+      "name": "chicken",
+      "category": "67730187d165b384de15cc69"
+    },
+    {
+      "_id": "67730187d165b384de15cc7d",
+      "name": "soap",
+      "category": "67730187d165b384de15cc69"
+    },
+    {
+      "_id": "67730187d165b384de15cc7e",
+      "name": "shirt",
+      "category": "67730187d165b384de15cc69"
+    },
+    {
+      "_id": "67730187d165b384de15cc7f",
+      "name": "mouse",
+      "category": "67730187d165b384de15cc69"
+    },
+    {
+      "_id": "67730187d165b384de15cc80",
+      "name": "chair",
+      "category": "67730187d165b384de15cc6a"
+    },
+    {
+      "_id": "67730187d165b384de15cc81",
+      "name": "shirt",
+      "category": "67730187d165b384de15cc6a"
+    },
+    {
+      "_id": "67730187d165b384de15cc82",
+      "name": "pants",
+      "category": "67730187d165b384de15cc6a"
+    },
+    {
+      "_id": "67730187d165b384de15cc83",
+      "name": "ball",
+      "category": "67730187d165b384de15cc6a"
+    },
+    {
+      "_id": "67730187d165b384de15cc84",
+      "name": "towels",
+      "category": "67730187d165b384de15cc6a"
+    },
+    {
+      "_id": "67730187d165b384de15cc85",
+      "name": "fish",
+      "category": "67730187d165b384de15cc6b"
+    },
+    {
+      "_id": "67730187d165b384de15cc86",
+      "name": "keyboard",
+      "category": "67730187d165b384de15cc6b"
+    },
+    {
+      "_id": "67730187d165b384de15cc87",
+      "name": "cheese",
+      "category": "67730187d165b384de15cc6b"
+    },
+    {
+      "_id": "67730187d165b384de15cc88",
+      "name": "shirt",
+      "category": "67730187d165b384de15cc6b"
+    },
+    {
+      "_id": "67730187d165b384de15cc89",
+      "name": "sausages",
+      "category": "67730187d165b384de15cc6b"
+    },
+    {
+      "_id": "67730187d165b384de15cc8a",
+      "name": "table",
+      "category": "67730187d165b384de15cc6c"
+    },
+    {
+      "_id": "67730187d165b384de15cc8b",
+      "name": "mouse",
+      "category": "67730187d165b384de15cc6c"
+    },
+    {
+      "_id": "67730187d165b384de15cc8c",
+      "name": "chair",
+      "category": "67730187d165b384de15cc6c"
+    },
+    {
+      "_id": "67730187d165b384de15cc8d",
+      "name": "chips",
+      "category": "67730187d165b384de15cc6c"
+    },
+    {
+      "_id": "67730187d165b384de15cc8e",
+      "name": "hat",
+      "category": "67730187d165b384de15cc6c"
+    },
+    {
+      "_id": "67730187d165b384de15cc8f",
+      "name": "tuna",
+      "category": "67730187d165b384de15cc6d"
+    },
+    {
+      "_id": "67730187d165b384de15cc90",
+      "name": "gloves",
+      "category": "67730187d165b384de15cc6d"
+    },
+    {
+      "_id": "67730187d165b384de15cc91",
+      "name": "shirt",
+      "category": "67730187d165b384de15cc6d"
+    },
+    {
+      "_id": "67730187d165b384de15cc92",
+      "name": "pizza",
+      "category": "67730187d165b384de15cc6d"
+    },
+    {
+      "_id": "67730187d165b384de15cc93",
+      "name": "bacon",
+      "category": "67730187d165b384de15cc6d"
+    },
+    {
+      "_id": "67730187d165b384de15cc94",
+      "name": "fish",
+      "category": "67730187d165b384de15cc6e"
+    },
+    {
+      "_id": "67730187d165b384de15cc95",
+      "name": "bike",
+      "category": "67730187d165b384de15cc6e"
+    },
+    {
+      "_id": "67730187d165b384de15cc96",
+      "name": "hat",
+      "category": "67730187d165b384de15cc6e"
+    },
+    {
+      "_id": "67730187d165b384de15cc97",
+      "name": "towels",
+      "category": "67730187d165b384de15cc6e"
+    },
+    {
+      "_id": "67730187d165b384de15cc98",
+      "name": "chips",
+      "category": "67730187d165b384de15cc6e"
+    },
+    {
+      "_id": "67730187d165b384de15cc99",
+      "name": "tuna",
+      "category": "67730187d165b384de15cc6f"
+    },
+    {
+      "_id": "67730187d165b384de15cc9a",
+      "name": "car",
+      "category": "67730187d165b384de15cc6f"
+    },
+    {
+      "_id": "67730187d165b384de15cc9b",
+      "name": "table",
+      "category": "67730187d165b384de15cc6f"
+    },
+    {
+      "_id": "67730187d165b384de15cc9c",
+      "name": "mouse",
+      "category": "67730187d165b384de15cc6f"
+    },
+    {
+      "_id": "67730187d165b384de15cc9d",
+      "name": "sausages",
+      "category": "67730187d165b384de15cc6f"
+    },
+    {
+      "_id": "67730187d165b384de15cc9e",
+      "name": "computer",
+      "category": "67730187d165b384de15cc70"
+    },
+    {
+      "_id": "67730187d165b384de15cc9f",
+      "name": "keyboard",
+      "category": "67730187d165b384de15cc70"
+    },
+    {
+      "_id": "67730187d165b384de15cca0",
+      "name": "soap",
+      "category": "67730187d165b384de15cc70"
+    },
+    {
+      "_id": "67730187d165b384de15cca1",
+      "name": "shirt",
+      "category": "67730187d165b384de15cc70"
+    },
+    {
+      "_id": "67730187d165b384de15cca2",
+      "name": "mouse",
+      "category": "67730187d165b384de15cc70"
+    }
+  ],
+  "brands": [
+    {
+      "_id": "67730187d165b384de15cca3",
+      "name": "Thiel - Kessler",
+      "logo": "https://picsum.photos/seed/xXw10EmUlA/3823/2282",
+      "contactInfo": {
+        "website": "https://massive-napkin.net/",
+        "email": "Germaine.Cassin24@yahoo.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Modesto.Lebsack6",
+          "facebook": "https://facebook.com/Milford.Collier"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc68"
+      ],
+      "status": "discontinued"
+    },
+    {
+      "_id": "67730187d165b384de15cca4",
+      "name": "Macejkovic, Schultz and Thompson",
+      "logo": "https://picsum.photos/seed/qNIkmQ7qq/712/3417",
+      "contactInfo": {
+        "website": "https://esteemed-glider.biz/",
+        "email": "Monty_Bernier79@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Thurman57",
+          "facebook": "https://facebook.com/Myra.Sipes84"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6a",
+        "67730187d165b384de15cc6c",
+        "67730187d165b384de15cc70"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15cca5",
+      "name": "Goyette, Jaskolski and Harvey",
+      "logo": "https://picsum.photos/seed/RHwlXL2G/2296/3944",
+      "contactInfo": {
+        "website": "https://agreeable-curl.net",
+        "email": "Curtis17@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Ara_Waelchi",
+          "facebook": "https://facebook.com/Pat.Lakin"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc67"
+      ],
+      "status": "active"
+    },
+    {
+      "_id": "67730187d165b384de15cca6",
+      "name": "Howell, Lesch and Moore",
+      "logo": "https://picsum.photos/seed/2HNkn0wHwi/282/1068",
+      "contactInfo": {
+        "website": "https://animated-louse.info/",
+        "email": "Kaleb59@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Courtney83",
+          "facebook": "https://facebook.com/Peyton_Altenwerth"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6f",
+        "67730187d165b384de15cc6c",
+        "67730187d165b384de15cc68"
+      ],
+      "status": "active"
+    },
+    {
+      "_id": "67730187d165b384de15cca7",
+      "name": "Russel, Crist and Dach",
+      "logo": "https://loremflickr.com/3606/3998?lock=5958250178150606",
+      "contactInfo": {
+        "website": "https://fond-metabolite.net/",
+        "email": "Kelvin4@yahoo.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Rosalee58",
+          "facebook": "https://facebook.com/Dorris_Toy"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6d",
+        "67730187d165b384de15cc67"
+      ],
+      "status": "discontinued"
+    },
+    {
+      "_id": "67730187d165b384de15cca8",
+      "name": "Witting - Lind",
+      "logo": "https://picsum.photos/seed/PNZTi/3136/169",
+      "contactInfo": {
+        "website": "https://winding-cheese.com",
+        "email": "Hilbert.Walsh32@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Erik.Langosh",
+          "facebook": "https://facebook.com/Mathias.Lowe93"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6c",
+        "67730187d165b384de15cc6f",
+        "67730187d165b384de15cc6b"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15cca9",
+      "name": "Schiller Group",
+      "logo": "https://loremflickr.com/3912/541?lock=7398992512195313",
+      "contactInfo": {
+        "website": "https://juvenile-plastic.com",
+        "email": "Keara.Sauer-Lowe@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Martin_Schmitt",
+          "facebook": "https://facebook.com/Turner73"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc67"
+      ],
+      "status": "discontinued"
+    },
+    {
+      "_id": "67730187d165b384de15ccaa",
+      "name": "Bartell and Sons",
+      "logo": "https://loremflickr.com/2495/3018?lock=4352098804330985",
+      "contactInfo": {
+        "website": "https://massive-haircut.name/",
+        "email": "Brett_Langworth@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Mathias.Cormier",
+          "facebook": "https://facebook.com/Libbie.Heathcote"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6c",
+        "67730187d165b384de15cc6b",
+        "67730187d165b384de15cc69"
+      ],
+      "status": "active"
+    },
+    {
+      "_id": "67730187d165b384de15ccab",
+      "name": "Bernhard - Rolfson",
+      "logo": "https://loremflickr.com/796/1352?lock=5707392327212557",
+      "contactInfo": {
+        "website": "https://dirty-lashes.info/",
+        "email": "Waylon_Macejkovic0@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Lucio_Lemke",
+          "facebook": "https://facebook.com/Kaleigh.Waters"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc70",
+        "67730187d165b384de15cc6f"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15ccac",
+      "name": "Goldner Inc",
+      "logo": "https://picsum.photos/seed/gAB11/242/2415",
+      "contactInfo": {
+        "website": "https://complicated-breastplate.net",
+        "email": "Shaniya.Koss30@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Nettie.Quitzon",
+          "facebook": "https://facebook.com/Vida.Prosacco"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6a",
+        "67730187d165b384de15cc6e",
+        "67730187d165b384de15cc6f"
+      ],
+      "status": "discontinued"
+    },
+    {
+      "_id": "67730187d165b384de15ccad",
+      "name": "Steuber - Price",
+      "logo": "https://loremflickr.com/817/977?lock=8703600968058873",
+      "contactInfo": {
+        "website": "https://frilly-foodstuffs.com",
+        "email": "Lisa84@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Tracy51",
+          "facebook": "https://facebook.com/Jordane_Kling"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6b"
+      ],
+      "status": "active"
+    },
+    {
+      "_id": "67730187d165b384de15ccae",
+      "name": "Hansen, Luettgen and Mosciski",
+      "logo": "https://picsum.photos/seed/XT06mn46/627/1880",
+      "contactInfo": {
+        "website": "https://vague-approach.biz",
+        "email": "Johann3@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Gordon_Nienow",
+          "facebook": "https://facebook.com/Julien.Lockman"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6c"
+      ],
+      "status": "active"
+    },
+    {
+      "_id": "67730187d165b384de15ccaf",
+      "name": "Brown Group",
+      "logo": "https://loremflickr.com/2170/3972?lock=383753282918303",
+      "contactInfo": {
+        "website": "https://remorseful-obesity.info/",
+        "email": "Devyn_Quigley-Stanton@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Orlando_Bernier-Konopelski63",
+          "facebook": "https://facebook.com/Consuelo_Crist"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6a"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15ccb0",
+      "name": "Ebert - Olson",
+      "logo": "https://picsum.photos/seed/XOXONX2d/1675/1392",
+      "contactInfo": {
+        "website": "https://apprehensive-brook.org",
+        "email": "Letha_Kub33@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Emerson_Kuhn",
+          "facebook": "https://facebook.com/Wilton_Zemlak54"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc69",
+        "67730187d165b384de15cc6f"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15ccb1",
+      "name": "Mante - Beatty",
+      "logo": "https://picsum.photos/seed/jTgqThAKw/3277/3460",
+      "contactInfo": {
+        "website": "https://motionless-exhaust.biz",
+        "email": "Stevie64@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Dennis.Cronin-Berge",
+          "facebook": "https://facebook.com/Malcolm_Keeling4"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc70"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15ccb2",
+      "name": "Schamberger, Thiel and Conroy",
+      "logo": "https://picsum.photos/seed/2khepmOxh6/1661/1326",
+      "contactInfo": {
+        "website": "https://wretched-tusk.info",
+        "email": "Vinnie62@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Charlotte25",
+          "facebook": "https://facebook.com/Darron.Kessler"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6f"
+      ],
+      "status": "discontinued"
+    },
+    {
+      "_id": "67730187d165b384de15ccb3",
+      "name": "O'Connell Inc",
+      "logo": "https://picsum.photos/seed/F8kdk2QVE/675/1883",
+      "contactInfo": {
+        "website": "https://dense-disconnection.net/",
+        "email": "Pearline.Larkin@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Chadd73",
+          "facebook": "https://facebook.com/Douglas3"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6a",
+        "67730187d165b384de15cc6d",
+        "67730187d165b384de15cc70"
+      ],
+      "status": "active"
+    },
+    {
+      "_id": "67730187d165b384de15ccb4",
+      "name": "Franey LLC",
+      "logo": "https://loremflickr.com/365/1583?lock=5578194420690459",
+      "contactInfo": {
+        "website": "https://meager-curl.com",
+        "email": "Franz.Rice31@hotmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Haleigh.Macejkovic23",
+          "facebook": "https://facebook.com/Ardella_Durgan84"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc67",
+        "67730187d165b384de15cc6c",
+        "67730187d165b384de15cc69"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15ccb5",
+      "name": "Rath and Sons",
+      "logo": "https://picsum.photos/seed/FsrL6/2983/3985",
+      "contactInfo": {
+        "website": "https://glass-spork.net",
+        "email": "Kaleigh.Quitzon@gmail.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Ray.Tromp27",
+          "facebook": "https://facebook.com/Kelsie.Denesik"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6b",
+        "67730187d165b384de15cc6a",
+        "67730187d165b384de15cc69"
+      ],
+      "status": "inactive"
+    },
+    {
+      "_id": "67730187d165b384de15ccb6",
+      "name": "Von Group",
+      "logo": "https://loremflickr.com/951/90?lock=5504278027104420",
+      "contactInfo": {
+        "website": "https://ethical-fowl.biz",
+        "email": "Blaise.Weber82@yahoo.com",
+        "socialMedia": {
+          "instagram": "https://instagram.com/Sidney_Moore",
+          "facebook": "https://facebook.com/Sheridan.Wilkinson32"
+        }
+      },
+      "categories": [
+        "67730187d165b384de15cc6f",
+        "67730187d165b384de15cc68"
+      ],
+      "status": "active"
+    }
+  ]
+}

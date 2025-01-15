@@ -1,0 +1,1328 @@
+{
+	"info": {
+		"_postman_id": "3570c081-764a-4e68-a343-1d65dfc7f344",
+		"name": "express-api-practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33240793"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hammad Javed\",\r\n    \"email\":\"hammad@gmail.com\",\r\n    \"password\":\"password\",\r\n    \"phone\": \"+923200007077\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sohaib@gmail.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/signin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/signout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"ham@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/forgot-password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/verify-email/{{token}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"verify-email",
+								"{{token}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPasssword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/reset-password/{{token}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"reset-password",
+								"{{token}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users?limit=50",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "admin",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/{{user-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{user-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/{{user-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{user-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOne",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Zeeshan Gujjar\",\r\n   \"emailVerified\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/{{user-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{user-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "User 5",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user5@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/PieCyfer/Downloads/pics/person-4.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePhone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"+923201234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/change-phone",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"change-phone"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "price-high-low",
+									"disabled": true
+								},
+								{
+									"key": "inStock",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/{{product-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"{{product-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Single\",\r\n    \"description\": \"Institution fast little current.\",\r\n    \"price\": {\r\n      \"base\": 330.77,\r\n      \"sale\": 232.19,\r\n      \"currency\": \"EUR\"\r\n    },\r\n    \"category\": \"clothes\",\r\n    \"subCategory\": \"tops\",\r\n    \"brand\": \"Gucci\",\r\n    \"variants\": [\r\n      {\r\n        \"size\": \"3XL\",\r\n        \"color\": \"LimeGreen\",\r\n        \"stock\": 20\r\n      },\r\n      {\r\n        \"size\": \"4XL\",\r\n        \"color\": \"SlateBlue\",\r\n        \"stock\": 12\r\n      }\r\n    ],\r\n    \"materials\": [\"above\"],\r\n    \"tags\": [\"article\", \"american\", \"seven\"],\r\n    \"seasonality\": \"Autumn\",\r\n    \"gender\": \"Men\",\r\n    \"ratings\": {\r\n      \"average\": 2.3,\r\n      \"count\": 302\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/{{product-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"{{product-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Single\",\r\n    \"description\": \"Institution fast little current.\",\r\n    \"price\": {\r\n      \"base\": 330.77,\r\n      \"sale\": 232.19,\r\n      \"currency\": \"USD\"\r\n    },\r\n    \"category\": \"clothes\",\r\n    \"subCategory\": \"tops\",\r\n    \"brand\": \"Gucci\",\r\n    \"variants\": [\r\n      {\r\n        \"size\": \"3XL\",\r\n        \"color\": \"LimeGreen\",\r\n        \"stock\": 20\r\n      },\r\n      {\r\n        \"size\": \"4XL\",\r\n        \"color\": \"SlateBlue\",\r\n        \"stock\": 12\r\n      }\r\n    ],\r\n    \"materials\": [\"above\"],\r\n    \"tags\": [\"article\", \"american\", \"seven\"],\r\n    \"seasonality\": \"Autumn\",\r\n    \"gender\": \"Men\",\r\n    \"ratings\": {\r\n      \"average\": 2.3,\r\n      \"count\": 302\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products/{{product-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"{{product-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trending",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products/trending",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"trending"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/orders/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/orders/{{order-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								"{{order-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"_id\": \"676523c84eca25d3e810c2a2\",\r\n      \"size\": \"3XL\",\r\n      \"color\": \"LimeGreen\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"_id\": \"676523c44eca25d3e810c299\",\r\n      \"size\": \"4XL\",\r\n      \"color\": \"SlateBlue\",\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"shippingAddress\": {\r\n    \"fullName\":\"Sohaib Rashed\",\r\n    \"address\": \"123 Main Street\",\r\n    \"city\": \"Lahore\",\r\n    \"country\": \"Pakistan\",\r\n    \"postalCode\": \"54000\",\r\n    \"phone\":\"+923200007077\"\r\n  },\r\n  \"paymentMethod\": \"Credit Card\",\r\n  \"notes\": \"Please leave with doorman if not home\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOne",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"summary\": {\r\n            \"totalItems\": 3,\r\n            \"uniqueItems\": 2,\r\n            \"averageItemPrice\": 232.19\r\n        },\r\n        \"shippingAddress\": {\r\n            \"fullName\": \"Muhammad Sohaib Rashed\",\r\n            \"address\": \"123 Main Street\",\r\n            \"city\": \"Lahore\",\r\n            \"country\": \"Pakistan\",\r\n            \"postalCode\": \"54000\",\r\n            \"phone\": \"+923200007077\"\r\n        },\r\n        \"_id\": \"67656d37db45d72ef4c2790f\",\r\n        \"user\": {\r\n            \"_id\": \"67650bfe4e144d660bf4d73e\",\r\n            \"name\": \"Sohaib Rashed\",\r\n            \"email\": \"sohaib@gmail.com\",\r\n            \"role\": \"owner\"\r\n        },\r\n        \"items\": [\r\n            {\r\n                \"variant\": {\r\n                    \"size\": \"3XL\",\r\n                    \"color\": \"LimeGreen\"\r\n                },\r\n                \"product\": {\r\n                    \"price\": {\r\n                        \"base\": 330.77,\r\n                        \"sale\": 232.19,\r\n                        \"currency\": \"EUR\"\r\n                    },\r\n                    \"ratings\": {\r\n                        \"average\": 0,\r\n                        \"count\": 0\r\n                    },\r\n                    \"_id\": \"676523c84eca25d3e810c2a2\",\r\n                    \"name\": \"Single\",\r\n                    \"category\": \"67640628f4a4aad47250d68e\",\r\n                    \"subCategory\": \"67640657f4a4aad47250d692\",\r\n                    \"brand\": \"67646fcfa1db18286a306316\",\r\n                    \"variants\": [\r\n                        {\r\n                            \"size\": \"3XL\",\r\n                            \"color\": \"LimeGreen\",\r\n                            \"stock\": 14,\r\n                            \"images\": [],\r\n                            \"_id\": \"676523c84eca25d3e810c2a3\"\r\n                        },\r\n                        {\r\n                            \"size\": \"4XL\",\r\n                            \"color\": \"SlateBlue\",\r\n                            \"stock\": 12,\r\n                            \"images\": [],\r\n                            \"_id\": \"676523c84eca25d3e810c2a4\"\r\n                        }\r\n                    ],\r\n                    \"seasonality\": \"Autumn\",\r\n                    \"gender\": \"Men\",\r\n                    \"isOnSale\": true,\r\n                    \"discountPercentage\": 30,\r\n                    \"id\": \"676523c84eca25d3e810c2a2\"\r\n                },\r\n                \"quantity\": 2,\r\n                \"price\": 232.19,\r\n                \"total\": 464.38,\r\n                \"_id\": \"67656d37db45d72ef4c27910\",\r\n                \"id\": \"67656d37db45d72ef4c27910\"\r\n            },\r\n            {\r\n                \"variant\": {\r\n                    \"size\": \"4XL\",\r\n                    \"color\": \"SlateBlue\"\r\n                },\r\n                \"product\": {\r\n                    \"price\": {\r\n                        \"base\": 330.77,\r\n                        \"sale\": 232.19,\r\n                        \"currency\": \"EUR\"\r\n                    },\r\n                    \"ratings\": {\r\n                        \"average\": 0,\r\n                        \"count\": 0\r\n                    },\r\n                    \"_id\": \"676523c44eca25d3e810c299\",\r\n                    \"name\": \"Single\",\r\n                    \"category\": \"67640628f4a4aad47250d68e\",\r\n                    \"subCategory\": \"67640657f4a4aad47250d692\",\r\n                    \"brand\": \"67646fcfa1db18286a306316\",\r\n                    \"variants\": [\r\n                        {\r\n                            \"size\": \"3XL\",\r\n                            \"color\": \"LimeGreen\",\r\n                            \"stock\": 20,\r\n                            \"images\": [],\r\n                            \"_id\": \"676523c44eca25d3e810c29a\"\r\n                        },\r\n                        {\r\n                            \"size\": \"4XL\",\r\n                            \"color\": \"SlateBlue\",\r\n                            \"stock\": 9,\r\n                            \"images\": [],\r\n                            \"_id\": \"676523c44eca25d3e810c29b\"\r\n                        }\r\n                    ],\r\n                    \"seasonality\": \"Autumn\",\r\n                    \"gender\": \"Men\",\r\n                    \"isOnSale\": true,\r\n                    \"discountPercentage\": 30,\r\n                    \"id\": \"676523c44eca25d3e810c299\"\r\n                },\r\n                \"quantity\": 1,\r\n                \"price\": 232.19,\r\n                \"total\": 232.19,\r\n                \"_id\": \"67656d37db45d72ef4c27911\",\r\n                \"id\": \"67656d37db45d72ef4c27911\"\r\n            }\r\n        ],\r\n        \"totalAmount\": 696.57,\r\n        \"paymentMethod\": \"Credit Card\",\r\n        \"paymentStatus\": \"Pending\",\r\n        \"orderStatus\": \"Pending\",\r\n        \"notes\": \"Please leave with doorman if not home\",\r\n        \"createdBy\": {\r\n            \"_id\": \"67650bfe4e144d660bf4d73e\",\r\n            \"name\": \"Sohaib Rashed\",\r\n            \"email\": \"sohaib@gmail.com\"\r\n        },\r\n        \"createdAt\": \"2024-12-20T13:12:23.735Z\",\r\n        \"updatedAt\": \"2024-12-20T13:12:23.735Z\",\r\n        \"__v\": 0,\r\n        \"id\": \"67656d37db45d72ef4c2790f\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders/{{order-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								"{{order-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/orders/{{order-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								"{{order-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/orders/mine",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								"mine"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePaymentStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentStatus\": \"Completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders/{{order-id}}/payment",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								"{{order-id}}",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrderStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderStatus\":\"Processing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders/{{order-id}}/order/status/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders",
+								"{{order-id}}",
+								"order",
+								"status",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dashboard/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dashboard",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "getCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/subcategory",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"subcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Clothes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createSubCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tops\",\r\n    \"category\": \"Clothes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/subcategory",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"subcategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "otp",
+			"item": [
+				{
+					"name": "sendOtp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"+923200007077\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/otp/send-otp",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"otp",
+								"send-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyOtp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"+923200007077\",\r\n    \"otp\":\"216460\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/otp/verify-otp",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"otp",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Gucci\",\r\n    \"contactInfo\": {\r\n        \"website\": \"www.gucci.com\",\r\n        \"email\": \"gucci@gmail.com\",\r\n        \"socialMedia\": {\r\n            \"instagram\": \"www.instagram.com\",\r\n            \"facebook\": \"www.facebook.com\"\r\n        }\r\n    },\r\n    \"categories\": [\r\n        \"clothes\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/brand",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBrand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/brand/67642acbd5969d3b2c210a1c",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brand",
+								"67642acbd5969d3b2c210a1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBrands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/brand",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/brand/67642acbd5969d3b2c210a1c",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brand",
+								"67642acbd5969d3b2c210a1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOne",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categories\": [\r\n        \"clothes\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/brand/67646fcfa1db18286a306316",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"brand",
+								"67646fcfa1db18286a306316"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/review?product=67686259892f7be8c17e9cde",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"review"
+							],
+							"query": [
+								{
+									"key": "product",
+									"value": "67686259892f7be8c17e9cde"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\": \"676523c44eca25d3e810c299\",\r\n    \"rating\": 3.5,\r\n    \"comment\": \"amazing stuff will buy again for sure\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/review",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/review/{{review-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"review",
+								"{{review-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/review/{{review-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"review",
+								"{{review-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOne",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 4.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/review/{{review-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"review",
+								"{{review-id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "favorite",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"676523c44eca25d3e810c299\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/favorite",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/favorite",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/favorite/{{fav-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"favorite",
+								"{{fav-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/favorite/{{fav-id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"favorite",
+								"{{fav-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMany",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/favorite",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/favorite/mine",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"favorite",
+								"mine"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "upload",
+			"item": [
+				{
+					"name": "profileImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/SOHAIB/Downloads/clothify/profiles/person-1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/upload/profile/image",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"upload",
+								"profile",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "productImages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/SOHAIB/Downloads/clothify/products/white-top-1.webp",
+										"/C:/Users/SOHAIB/Downloads/clothify/products/white-top-2.webp",
+										"/C:/Users/SOHAIB/Downloads/clothify/products/white-top-3.webp"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/upload/product/image/{{product-id}}/0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"upload",
+								"product",
+								"image",
+								"{{product-id}}",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProfileImage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/upload/profile/image",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"upload",
+								"profile",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductsImage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/upload/product/image/{{product-id}}/0/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"upload",
+								"product",
+								"image",
+								"{{product-id}}",
+								"0",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductImages",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/upload/product/image/{{product-id}}/0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"upload",
+								"product",
+								"image",
+								"{{product-id}}",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
