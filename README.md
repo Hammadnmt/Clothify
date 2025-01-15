@@ -63,7 +63,7 @@
 
 ### **Integrations**
 
-- **Payment Gateway**: Integrated with [Stripe](https://stripe.com/) or [PayPal](https://www.paypal.com/) for secure online payments.
+- **Payment Gateway**: Integrated with [Stripe](https://stripe.com/) for secure online payments.
 - **Cloudinary**: For efficient image storage and management.
 
 ---
