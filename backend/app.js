@@ -35,10 +35,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: (origin, callback) => {
-      callback(null, origin || "*"); // Allow requests from all origins
-    },
-    credentials: true, // Allow credentials (cookies, etc.)
+    origin: true,
+    credentials: true,
   })
 );
 
