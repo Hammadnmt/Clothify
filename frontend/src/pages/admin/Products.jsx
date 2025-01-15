@@ -15,7 +15,7 @@ import ProductDetails from "@/components/ProductDetails";
 import InventoryLayout from "@/components/admin/InventoryLayout";
 import Logger from "@/utils/logger";
 import SearchBar from "@/components/SearchBar";
-import { useErrorHandler } from "@/hooks/UseErrorHandler";
+import { useErrorHandler } from "@/hooks/useErrorHandler";
 import { useDebounce } from "@/hooks/useDebounce";
 import ProductFilters from "@/components/admin/ProductFilter";
 

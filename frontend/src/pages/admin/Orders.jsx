@@ -14,7 +14,7 @@ import OrderDetails from "@/components/OrderDetails";
 import ReusableDataTable from "@/components/admin/ReusableDataTable";
 import InventoryLayout from "@/components/admin/InventoryLayout";
 import SearchBar from "@/components/SearchBar";
-import { useErrorHandler } from "@/hooks/UseErrorHandler";
+import { useErrorHandler } from "@/hooks/useErrorHandler";
 import Logger from "@/utils/logger";
 import { useDebounce } from "@/hooks/useDebounce";
 import OrderFilter from "@/components/admin/OrderFilter";

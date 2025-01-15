@@ -12,7 +12,7 @@ import Paginate from "@/components/Paginate";
 import ReusableDataTable from "@/components/admin/ReusableDataTable";
 import SingleUser from "./SingleUser";
 import { userTableConfig } from "@/utils/tableConfig";
-import { useErrorHandler } from "@/hooks/UseErrorHandler";
+import { useErrorHandler } from "@/hooks/useErrorHandler";
 import Logger from "@/utils/logger";
 import SearchBar from "@/components/SearchBar";
 import InventoryLayout from "@/components/admin/InventoryLayout";
